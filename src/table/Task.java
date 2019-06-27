@@ -34,7 +34,7 @@ public class Task {
 
 			}
 
-			// from right max row-3 to right max row-1
+			// from right r2-3 to right r2-1
 
 			for (int i = r1 + 1; i <= r2 - 1; i++) {
 				spiral[i][c2] = value++;
