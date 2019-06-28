@@ -5,6 +5,8 @@ import javax.swing.JOptionPane;
 public class Task1 {
 
 	public static void main(String[] args) {
+		
+		//Fill the table in spiral form from up left clockwise starting from 1
 
 		int Row = Integer.parseInt(JOptionPane.showInputDialog("Input number of rows: "));
 		int Column = Integer.parseInt(JOptionPane.showInputDialog("Input number of columns: "));
