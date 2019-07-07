@@ -24,18 +24,21 @@ public class Task {
 			for (int i = c2; i >= c1; i--) {
 				if (value <= Column * Row) {
 					spiral[r2][i] = value++;
+
 				}
 			}
 			// from final row left bottom up to first row left top
 			for (int i = r2 - 1; i >= r1; i--) {
 				if (value <= Column * Row) {
 					spiral[i][c1] = value++;
+
 				}
 			}
 			// from first row left top to right top
 			for (int i = c1 + 1; i <= c2; i++) {
 				if (value <= Column * Row) {
 					spiral[r1][i] = value++;
+
 				}
 			}
 
@@ -44,6 +47,7 @@ public class Task {
 			for (int i = r1 + 1; i <= r2 - 1; i++) {
 				if (value <= Column * Row) {
 					spiral[i][c2] = value++;
+
 				}
 			}
 

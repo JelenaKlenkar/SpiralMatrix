@@ -5,8 +5,8 @@ import javax.swing.JOptionPane;
 public class Task1 {
 
 	public static void main(String[] args) {
-		
-		//Fill the table in spiral form from up left clockwise starting from 1
+
+		// Fill the table in spiral form from up left clockwise starting from 1
 
 		int Row = Integer.parseInt(JOptionPane.showInputDialog("Input number of rows: "));
 		int Column = Integer.parseInt(JOptionPane.showInputDialog("Input number of columns: "));
@@ -22,20 +22,28 @@ public class Task1 {
 		while (value <= Row * Column) {
 			// from first row left to right
 			for (int i = c1; i <= c2; i++) {
-				spiral[r1][i] = value++;
+				if (value <= Row * Column) {
+					spiral[r1][i] = value++;
+				}
 			}
 			// from r1+1 down to r2-1
 
 			for (int j = r1 + 1; j <= r2; j++) {
-				spiral[j][c2] = value++;
+				if (value <= Row * Column) {
+					spiral[j][c2] = value++;
+				}
 			}
 			// from c2-1 right to c1 left
 			for (int i = c2 - 1; i >= c1; i--) {
-				spiral[r2][i] = value++;
+				if (value <= Row * Column) {
+					spiral[r2][i] = value++;
+				}
 			}
 			// from r2-1 down up to r1+1
 			for (int j = r2 - 1; j >= r1 + 1; j--) {
-				spiral[j][c1] = value++;
+				if (value <= Row * Column) {
+					spiral[j][c1] = value++;
+				}
 			}
 			c1++;
 			r1++;
